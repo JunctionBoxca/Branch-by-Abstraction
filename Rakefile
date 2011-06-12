@@ -25,9 +25,9 @@ file EXE => OBJ + [BIN_DIR] do
 	cpp "-o #{EXE} -I#{INCLUDE} #{OBJ}"
 end
 
-desc "Default: Build the #{EXE} executable"
-task :default => [:build]
+desc "Default: compile "
+task :default => [:compile]
 
-desc "Build the executable"
-task :build => [EXE]
+desc "Compile #{EXE}"
+task :compile => [EXE]
 
