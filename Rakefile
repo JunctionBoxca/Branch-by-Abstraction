@@ -21,7 +21,7 @@ file BIN_DIR do
 	Dir.mkdir(BIN_DIR)
 end
 
-file EXE => [OBJ, BIN_DIR] do
+file EXE => OBJ + [BIN_DIR] do
 	cpp "-o #{EXE} -I#{INCLUDE} #{OBJ}"
 end
 
