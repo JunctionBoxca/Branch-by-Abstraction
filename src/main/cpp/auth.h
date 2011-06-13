@@ -5,7 +5,7 @@
 
 class Auth {
 	public:
-		bool authenticate(std::string username, std::string password);
+		virtual bool authenticate(std::string username, std::string password) = 0;
 };
 
 #endif//__AUTHENTICATE_H__
